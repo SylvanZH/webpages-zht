@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .header {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-icon, .user-icon {
+            cursor: pointer;
+            padding: 0 15px;
+        }
+        .menu-icon {
+            font-size: 24px;
+        }
+        .user-icon {
+            font-size: 24px;
+        }
+        .menu {
+            list-style: none;
+            background: #555;
+            padding: 0;
+            margin: 0;
+            display: none;
+            position: absolute;
+            width: 200px;
+            top: 50px;
+            right: 20px;
+        }
+        .menu li {
+            display: block;
+            width: 100%;
+        }
+        .menu a {
+            display: block;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            background-color: #777;
+        }
+        .container {
+            padding: 20px;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .menu-icon, .user-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="user-icon" onclick="goToUserCenter()">👤</div>
+    </div>
+    <ul class="menu" id="menu">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#news">新闻</a></li>
+        <li><a href="#contact">联系我们</a></li>
+        <li><a href="#about">关于我们</a></li>
+    </ul>
+    <div class="container">
+        <!-- 页面内容 -->
+    </div>
+    <div class="footer">
+        <p>版权所有 &copy; 2024 学院名称</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        function goToUserCenter() {
+            // 这里可以添加跳转到用户中心的逻辑
+            console.log('进入用户中心');
+            // 实际项目中，这里可以是 window.location.href = '/user-center'; 或其他逻辑
+        }
+    </script>
+</body>
+</html>
